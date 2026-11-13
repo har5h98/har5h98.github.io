@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support | Smallplate</title><meta name="description" content="Get help with Smallplate.">
+<link rel="canonical" href="https://har5h98.github.io/support/"><meta property="og:title" content="Support | Smallplate">
+<meta property="og:description" content="Get help with Smallplate."><meta property="og:type" content="website"><meta property="og:url" content="https://har5h98.github.io/support/">
+<meta name="theme-color" content="#2F5D45"><meta property="og:image" content="https://har5h98.github.io/img/og.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css"></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="/"><i></i>smallplate</a>
+<a class="btn" href="/#join">Join the waitlist</a></div></header>
+<main class="wrap"><article class="legal"><p class="crumbs">Updated November 12, 2026</p><h1>Support</h1><h2>Contact us</h2><p>Use the form below. We usually reply within two business days. For anything urgent about your health, contact your doctor; in an emergency, call 911.</p><p></p><form class="contact" id="contact" novalidate>
+<label for="c-email">Your email (so we can reply)</label><input id="c-email" type="email" autocomplete="email" required>
+<label for="c-msg">Message</label><textarea id="c-msg" rows="5" required maxlength="2000"></textarea>
+<button class="btn" type="submit">Send message</button><p class="note" id="c-note" role="status"></p></form>
+<script>(() => {
+  const f = document.getElementById('contact'), note = document.getElementById('c-note');
+  const get = k => { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } };
+  f.addEventListener('submit', ev => {
+    ev.preventDefault();
+    const email = f.querySelector('#c-email').value.trim(), message = f.querySelector('#c-msg').value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || !message) { note.textContent = 'Add your email and a message.'; return; }
+    const lead = get('sp_lead'), src = get('sp_src') || {};
+    const payload = { event: 'support_message', lead_id: (lead && lead.id) || Math.random().toString(36).slice(2, 10), email,
+      source: src.source || 'direct', message, page: location.pathname, ts: new Date().toISOString() };
+    const fd = new URLSearchParams(); fd.set('entry.1633762701', JSON.stringify(payload));
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSc6zYDcRtTgzkLJ_L8X23lL7CZsdsMizXuW4fb2oRe6kgnQjQ/formResponse', { method: 'POST', mode: 'no-cors', body: fd })
+      .then(() => { f.reset(); note.textContent = 'Thanks. We got it and will reply by email.'; })
+      .catch(() => { note.textContent = 'That did not send. Check your connection and try again.'; });
+  });
+})();</script><p></p><h2>Common questions</h2><p><b>How do I cancel Pro?</b> iPhone Settings → your name → Subscriptions → Smallplate. You keep Pro until the end of the period you paid for, and the free plan stays.</p><p><b>Can I get a refund?</b> Apple handles refunds for App Store purchases: go to reportaproblem.apple.com.</p><p><b>I got a new phone.</b> Install Smallplate, then Settings → Restore purchases. Your meal history moves with your iPhone backup.</p><p><b>Apple Health isn't syncing.</b> Open the Health app → Sharing → Apps → Smallplate and check the categories are on.</p><p><b>Can you tell me what dose to take?</b> No. Smallplate never gives dosing advice. Please ask your prescriber.</p><p><b>Delete my waitlist information.</b> Use the form above with the email you signed up with, and we'll delete it within 45 days (usually much sooner).</p></article></main>
+<footer><div class="wrap"><div class="links"><b>Cuisines:</b><a href="/cuisine/american/">American</a><a href="/cuisine/mexican/">Mexican</a><a href="/cuisine/latin/">Latin &amp; Caribbean</a><a href="/cuisine/italian/">Italian</a><a href="/cuisine/european/">European</a><a href="/cuisine/mediterranean/">Greek &amp; Med</a><a href="/cuisine/middle-eastern/">Middle Eastern</a><a href="/cuisine/indian/">Indian</a><a href="/cuisine/chinese/">Chinese</a><a href="/cuisine/japanese/">Japanese</a><a href="/cuisine/korean/">Korean</a><a href="/cuisine/southeast-asian/">Southeast Asian</a></div><div class="links"><b>Gentle days:</b><a href="/gentle/nausea/">Easy on nausea</a><a href="/gentle/reflux/">Reflux-friendly</a><a href="/gentle/constipation/">Fiber + fluids</a><a href="/gentle/low-appetite/">No-appetite days</a></div>
+<div class="links"><a href="/privacy/">Privacy</a><a href="/health-data/">Health data</a><a href="/terms/">Terms</a><a href="/support/">Support</a></div>
+<p>Recipes and nutrition are general information, not medical advice. Nutrition is calculated from USDA FoodData Central.
+Talk to your clinician about your own needs. Smallplate isn't affiliated with or endorsed by any drug maker or grocery store;
+their names are trademarks of their owners. © 2026 Smallplate</p></div></footer><script>(() => { try {
+  if (JSON.parse(localStorage.getItem('sp_src') || 'null')) return;
+  const q = new URLSearchParams(location.search), r = (() => { try { const h = new URL(document.referrer).hostname.replace(/^www\./, ''); return h && h !== location.hostname ? h : ''; } catch { return ''; } })();
+  const source = (q.get('utm_source') || r).toLowerCase().slice(0, 40);
+  if (source) localStorage.setItem('sp_src', JSON.stringify({ source, medium: q.get('utm_medium') || '', campaign: q.get('utm_campaign') || '', content: q.get('utm_content') || '', ref: '' }));
+} catch {} })();</script></body></html>

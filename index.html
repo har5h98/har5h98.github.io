@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBF7F1">
+<link rel="canonical" href="https://har5h98.github.io/">
+<link rel="apple-touch-icon" href="/img/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Smallplate">
+<meta property="og:title" content="Smallplate: meal plans for life on a GLP-1">
+<meta property="og:description" content="Meal plans for life on a GLP-1, shot or pill: protein you can actually eat, meals that go easy on your stomach, and no calorie counting. Free plan, no account.">
+<meta property="og:url" content="https://har5h98.github.io/">
+<meta property="og:image" content="https://har5h98.github.io/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Smallplate Waitlist</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Ccircle cx='14' cy='14' r='13' fill='%232F5D45'/%3E%3Ccircle cx='14' cy='14' r='8.4' fill='none' stroke='%23FBF7F1' stroke-width='1.8'/%3E%3Ccircle cx='14' cy='14' r='3' fill='%23D9774B'/%3E%3C/svg%3E">
+<meta name="description" content="Meal plans for life on a GLP‑1, shot or pill. Protein you can actually eat, meals that go easy on your stomach, and no calorie counting. Coming soon to iPhone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@500;600;700;800&display=swap">
+<style>
+/* Layout: a calm cookbook spread. Cream page, real product screenshots, one deep-green band for the offer.
+   The one subject-specific device: a Nutrition Facts panel that proves "same protein, smaller plate".
+   Tokens follow the app (src/lib/theme.ts). */
+:root {
+  --paper: #FBF7F1; --paper-2: #F4EEE4; --card: #FFFFFF; --ink: #1D2621; --ink-2: #46514A; --ink-3: #7A8279; --rule: #E6DDCF;
+  --sage: #2F5D45; --sage-tint: #E2ECE4; --terra: #C9683D; --terra-tint: #F8E3D6; --butter: #F0D28A; --mint: #A8DCC5; --clay: #E9B396;
+  --deep: #1F3A2C; --on-deep: #F4F1EA; --on-deep-2: #AFC3B5;
+  --device: #121513; --shadow: 0 30px 60px -20px rgba(30,40,34,.28), 0 12px 24px -12px rgba(30,40,34,.18);
+  --nav: rgba(251,247,241,.86);
+  --serif: "Fraunces", "Iowan Old Style", Georgia, serif; --sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #111513; --paper-2: #171C19; --card: #1B211D; --ink: #EDF1EB; --ink-2: #C1C9C2; --ink-3: #8A948C; --rule: #2A332D;
+  --sage: #8FC4A3; --sage-tint: #213128; --terra: #E69A73; --terra-tint: #3A2A21; --butter: #C9A85A; --mint: #5F9C82; --clay: #B9785A;
+  --deep: #0C1611; --on-deep: #EDF1EB; --on-deep-2: #98AC9F;
+  --device: #000000; --shadow: 0 30px 60px -20px rgba(0,0,0,.6), 0 12px 24px -12px rgba(0,0,0,.5);
+  --nav: rgba(17,21,19,.86); color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --paper: #111513; --paper-2: #171C19; --card: #1B211D; --ink: #EDF1EB; --ink-2: #C1C9C2; --ink-3: #8A948C; --rule: #2A332D;
+  --sage: #8FC4A3; --sage-tint: #213128; --terra: #E69A73; --terra-tint: #3A2A21; --butter: #C9A85A; --mint: #5F9C82; --clay: #B9785A;
+  --deep: #0C1611; --on-deep: #EDF1EB; --on-deep-2: #98AC9F;
+  --device: #000000; --shadow: 0 30px 60px -20px rgba(0,0,0,.6), 0 12px 24px -12px rgba(0,0,0,.5);
+  --nav: rgba(17,21,19,.86); color-scheme: dark; }
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 500 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: hidden; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--paper); }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 600; color: var(--ink); text-wrap: balance; }
+h1 { font-size: clamp(44px, 6.2vw, 78px); line-height: 1.02; letter-spacing: -0.032em; }
+h2 { font-size: clamp(32px, 3.8vw, 48px); line-height: 1.08; letter-spacing: -0.025em; }
+h3 { font-size: 21px; line-height: 1.25; letter-spacing: -0.01em; }
+h1 em { font-style: italic; font-weight: 500; color: var(--sage); letter-spacing: -0.035em; }
+.wrap { width: 100%; max-width: 1140px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.label { font-size: 12.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+.lede { font-size: clamp(18px, 1.6vw, 20px); line-height: 1.55; color: var(--ink-2); max-width: 31em; }
+.body { color: var(--ink-2); max-width: 30em; }
+.num { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 2px solid var(--terra); outline-offset: 3px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* Buttons and the email field */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 52px; padding: 0 24px; border: 0; border-radius: 14px; font: 700 16px/1 var(--sans); letter-spacing: -0.005em; cursor: pointer; text-decoration: none; white-space: nowrap; transition: background .2s, transform .12s; }
+.btn:active { transform: translateY(1px); }
+.btn-solid { background: var(--sage); color: #fff; }
+.btn-solid:hover { background: color-mix(in srgb, var(--sage) 88%, #000); }
+:root[data-theme="dark"] .btn-solid { color: #0F1A14; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-solid { color: #0F1A14; } }
+.btn-quiet { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+.btn-quiet:hover { border-color: var(--ink-3); }
+.signup { display: grid; gap: 12px; width: 100%; max-width: 460px; }
+.field { display: flex; gap: 8px; }
+.field input { flex: 1; min-width: 0; height: 52px; padding: 0 16px; border: 1px solid var(--rule); border-radius: 14px; background: var(--card); color: var(--ink); font: 600 16px var(--sans); transition: border-color .2s, box-shadow .2s; }
+.field input::placeholder { color: var(--ink-3); font-weight: 500; }
+.field input:focus { outline: none; border-color: var(--sage); box-shadow: 0 0 0 4px var(--sage-tint); }
+.field input[aria-invalid="true"] { border-color: var(--terra); box-shadow: 0 0 0 4px var(--terra-tint); }
+.note { font-size: 14px; color: var(--ink-3); }
+.note strong { color: var(--ink); font-weight: 700; }
+.consent { font-size: 12.5px; }
+sup { font-size: .7em; line-height: 0; } sup a { color: var(--ink-3); text-decoration: none; font-weight: 700; } .consent a { color: inherit; text-decoration: underline; }
+.err { font-size: 14px; font-weight: 600; color: var(--terra); }
+.err:empty { display: none; }
+@media (max-width: 480px) { .field { flex-direction: column; } .field input { flex: none; width: 100%; } .field .btn { width: 100%; } }
+
+/* Nav */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--nav); backdrop-filter: saturate(1.3) blur(16px); -webkit-backdrop-filter: saturate(1.3) blur(16px); border-bottom: 1px solid transparent; transition: border-color .3s; }
+.nav.scrolled { border-bottom-color: var(--rule); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
+.mark { display: inline-flex; align-items: center; gap: 10px; font: 600 22px/1 var(--serif); letter-spacing: -0.02em; text-decoration: none; }
+.mark svg { flex: none; }
+.nav-links { display: flex; align-items: center; gap: 30px; font-size: 15px; font-weight: 600; color: var(--ink-2); }
+.nav-links a { text-decoration: none; }
+.nav-links a:not(.btn):hover { color: var(--ink); }
+.nav .btn { height: 40px; padding: 0 16px; font-size: 14.5px; border-radius: 11px; }
+@media (max-width: 820px) { .nav-links a:not(.btn) { display: none; } }
+@media (max-width: 360px) { .nav .btn .long { display: none; } }
+.nav .btn { gap: 0; } .nav .btn .long { white-space: pre; }
+
+/* Hero */
+.hero { padding-block: clamp(40px, 7vw, 96px) clamp(56px, 8vw, 112px); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+.hero-copy { display: grid; gap: 28px; justify-items: start; }
+.kicker { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: var(--ink-2); }
+.kicker i { width: 7px; height: 7px; border-radius: 50%; background: var(--terra); box-shadow: 0 0 0 5px var(--terra-tint); }
+.hero-art { position: relative; display: grid; place-items: center; min-height: 560px; }
+@media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } .hero-art { min-height: 0; padding-block: 12px 0; } }
+
+/* App plates (the app's own motif, from its welcome screen) */
+.plate-mark { position: absolute; border-radius: 50%; background: radial-gradient(circle, var(--a) 0 54%, #fff 55% 58%, var(--a) 59% 66%, var(--b) 67% 100%); opacity: .95; }
+:root[data-theme="dark"] .plate-mark { opacity: .35; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .plate-mark { opacity: .35; } }
+
+/* Device frame around real screenshots */
+.device { position: relative; width: min(300px, 78vw); aspect-ratio: 1206 / 2622; padding: 10px; border-radius: 52px; background: var(--device); box-shadow: var(--shadow), inset 0 0 0 1px rgba(255,255,255,.07); }
+.device img { width: 100%; height: 100%; object-fit: cover; border-radius: 42px; background: var(--paper-2); }
+.device.sm { width: min(270px, 70vw); }
+.device.tilt { transform: rotate(-2deg); }
+
+/* Section scaffolding */
+section { position: relative; }
+.sec { padding-block: clamp(72px, 10vw, 136px); }
+.sec-head { display: grid; gap: 16px; max-width: 640px; }
+.rule-top { border-top: 1px solid var(--rule); }
+
+/* Four reasons, one per real worry */
+.pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 36px; }
+.pillars > div { background: var(--card); border: 1px solid var(--rule); border-radius: 22px; padding: 22px; display: grid; gap: 8px; align-content: start; }
+.pillars .pi { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; background: var(--sage-tint); color: var(--sage); }
+.pillars h3 { font-size: 20px; }
+.pillars p { color: var(--ink-2); font-size: 15.5px; line-height: 1.5; }
+@media (max-width: 700px) { .pillars { grid-template-columns: 1fr; gap: 10px; margin-top: 24px; } .pillars > div { grid-template-columns: 42px minmax(0, 1fr); column-gap: 14px; padding: 18px; } .pillars .pi { grid-row: span 2; } }
+/* Screens: a row on desktop, a swipeable strip on phones */
+.shots-sec { padding-block: 0 clamp(56px, 8vw, 104px); }
+.strip { display: flex; gap: clamp(16px, 4vw, 48px); justify-content: center; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px max(20px, env(safe-area-inset-left, 0px)) 24px max(20px, env(safe-area-inset-right, 0px)); scrollbar-width: none; }
+.strip::-webkit-scrollbar { display: none; }
+.strip figure { margin: 0; flex: none; scroll-snap-align: center; display: grid; gap: 14px; justify-items: center; }
+.strip .device { width: min(250px, 62vw); }
+.strip figcaption { font-size: 14.5px; font-weight: 700; color: var(--ink-2); }
+@media (max-width: 820px) { .strip { justify-content: flex-start; } }
+@media (max-width: 900px) { .hero-art { display: none; } .hero { padding-block: 28px 48px; } }
+/* Offer */
+.offer { background: var(--deep); color: var(--on-deep); }
+.offer h2 { color: var(--on-deep); }
+.offer .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(36px, 6vw, 96px); align-items: center; }
+@media (max-width: 900px) { .offer .wrap { grid-template-columns: 1fr; } }
+.offer .body { color: var(--on-deep-2); }
+.offer .field input { background: rgba(255,255,255,.96); color: #1D2621; border-color: transparent; }
+.offer .field input::placeholder { color: #7A8279; }
+.offer .btn-solid { background: #D9774B; color: #fff; }
+.offer .btn-solid:hover { background: #C9683D; }
+.offer .note { color: var(--on-deep-2); }
+.offer .note strong { color: var(--on-deep); }
+.offer .err { color: #FFC9AE; }
+.ticket { border: 1px solid rgba(255,255,255,.16); border-radius: 22px; padding: 28px; display: grid; gap: 14px; background: rgba(255,255,255,.04); }
+.ticket .label { color: var(--on-deep-2); }
+.ticket .price { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.ticket .price b { font: 600 60px/1 var(--serif); letter-spacing: -0.03em; }
+.ticket .price s { color: var(--on-deep-2); font-size: 18px; }
+.ticket ul { list-style: none; margin: 0; padding: 14px 0 0; border-top: 1px solid rgba(255,255,255,.14); display: grid; gap: 9px; font-size: 15px; color: var(--on-deep-2); }
+.ticket li { display: flex; gap: 10px; }
+.ticket li::before { content: ""; flex: none; width: 6px; height: 6px; margin-top: 9px; border-radius: 50%; background: #D9774B; }
+
+/* FAQ */
+.faq-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+@media (max-width: 860px) { .faq-grid { grid-template-columns: 1fr; } }
+.faq { border-top: 1px solid var(--rule); }
+.faq details { border-bottom: 1px solid var(--rule); }
+.faq summary { list-style: none; cursor: pointer; padding: 20px 40px 20px 0; position: relative; font-size: 17px; font-weight: 700; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; position: absolute; right: 4px; top: 50%; width: 12px; height: 12px; margin-top: -8px; border-right: 2px solid var(--ink-3); border-bottom: 2px solid var(--ink-3); transform: rotate(45deg); transition: transform .25s; }
+.faq details[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+.faq details p { padding: 0 40px 22px 0; color: var(--ink-2); }
+
+footer { padding-block: 40px calc(48px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--rule); }
+footer .wrap { display: grid; gap: 22px; }
+.foot-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px 24px; padding-bottom: 22px; border-bottom: 1px solid var(--rule); }
+.foot-legal { display: grid; gap: 8px; }
+.foot-legal p { font-size: 12.5px; line-height: 1.55; max-width: 80em; margin: 0; }
+footer p { font-size: 13.5px; color: var(--ink-3); max-width: 46em; }
+
+footer .links { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; font-weight: 700; }
+footer .links a { color: var(--ink-2); text-decoration: none; } footer .links a:hover { color: var(--ink); text-decoration: underline; }
+/* Mobile sticky bar */
+.dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; display: none; align-items: center; gap: 12px; padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: var(--nav); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-top: 1px solid var(--rule); transform: translateY(105%); transition: transform .3s ease; }
+.dock.show { transform: none; }
+.dock p { flex: 1; font-size: 14px; font-weight: 600; line-height: 1.3; color: var(--ink-2); }
+.dock p strong { color: var(--ink); }
+.dock .btn { height: 44px; padding: 0 16px; font-size: 15px; }
+@media (max-width: 760px) { .dock { display: flex; } footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); } }
+
+/* Reveal: elements are visible at rest; only those below the fold start slightly lower */
+.rv { transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+.rv.pre { transform: translateY(22px); }
+@media (prefers-reduced-motion: reduce) { .rv.pre { transform: none; } }
+
+/* Waitlist sheet */
+.sheet { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: rgba(12,16,14,.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.panel { width: min(500px, 100%); max-height: 100%; overflow: auto; background: var(--card); border: 1px solid var(--rule); border-radius: 24px; padding: 24px 24px 26px; display: grid; gap: 20px; box-shadow: 0 30px 80px rgba(0,0,0,.28); animation: rise .3s cubic-bezier(.2,.8,.2,1); }
+@keyframes rise { from { transform: translateY(12px); opacity: .6; } }
+.panel-top { display: flex; align-items: center; gap: 14px; }
+.steps { flex: 1; display: flex; gap: 5px; }
+.steps i { flex: 1; height: 4px; border-radius: 2px; background: var(--rule); transition: background .3s; }
+.steps i.on { background: var(--sage); }
+.x { width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--rule); background: transparent; color: var(--ink-2); cursor: pointer; display: grid; place-items: center; }
+.x:hover { color: var(--ink); border-color: var(--ink-3); }
+.panel h3 { font-size: 26px; letter-spacing: -0.02em; }
+.panel .sub { color: var(--ink-3); font-size: 15px; margin-top: 6px; }
+fieldset.q { border: 0; padding: 0; margin: 0; min-width: 0; }
+.q legend { font-weight: 700; font-size: 15px; padding: 0; margin-bottom: 10px; }
+.opts { display: grid; gap: 8px; }
+.opts button { min-height: 50px; padding: 12px 16px; border-radius: 14px; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); font: 600 15.5px var(--sans); cursor: pointer; transition: border-color .15s, background .15s; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; }
+.opts button::after { content: ""; flex: none; width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--ink-3); box-sizing: border-box; }
+.opts button[aria-pressed="true"]::after { border: 6px solid currentColor; }
+.qcount { font-size: 13px; font-weight: 700; color: var(--ink-3); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 6px; }
+.perks { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; font-size: 15px; color: var(--ink-2); }
+.perks li { display: flex; gap: 10px; align-items: baseline; } .perks li::before { content: "✓"; color: var(--sage); font-weight: 800; }
+.opts button:hover { border-color: var(--ink-3); }
+.opts button[aria-pressed="true"] { background: var(--sage); border-color: var(--sage); color: #fff; }
+:root[data-theme="dark"] .opts button[aria-pressed="true"] { color: #0F1A14; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .opts button[aria-pressed="true"] { color: #0F1A14; } }
+.panel .ticket { background: var(--paper); border-color: var(--rule); color: var(--ink); }
+.panel .ticket .price b { font-size: 48px; }
+.panel .ticket .price s, .panel .ticket p { color: var(--ink-3); }
+.linkish { justify-self: center; background: none; border: 0; padding: 6px; color: var(--ink-3); font: 600 14.5px var(--sans); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.linkish:hover { color: var(--ink); }
+.copyrow { display: flex; gap: 8px; }
+.copyrow input { flex: 1; min-width: 0; height: 48px; padding: 0 12px; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper); color: var(--ink-2); font: 600 14px var(--sans); }
+.copyrow .btn { height: 48px; }
+#sheet-body { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 380px) { .copyrow { flex-direction: column; } .copyrow input { flex: none; width: 100%; } }
+.btn[disabled] { opacity: .45; cursor: not-allowed; }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Back to top">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="var(--sage)"/><circle cx="14" cy="14" r="8.4" fill="none" stroke="var(--paper)" stroke-width="1.8"/><circle cx="14" cy="14" r="3" fill="var(--terra)"/></svg>
+      <span data-brand>Smallplate</span>
+    </a>
+    <nav class="nav-links" aria-label="Page sections">
+      <a href="#why">Why it's different</a>
+      <a href="#join">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-solid" href="#join" data-open>Join<span class="long"> the waitlist</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="kicker"><i aria-hidden="true"></i>Coming soon to iPhone</span>
+        <h1>Your plate got smaller. Your protein <em>shouldn't.</em></h1>
+        <p class="lede">Meal plans for life on a GLP‑1, shot or pill. Protein you can actually eat, meals that go easy on your stomach, and no calorie counting.</p>
+        <form class="signup" id="hero-form" novalidate>
+          <div class="field">
+            <label for="hero-email" hidden>Email address</label>
+            <input id="hero-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email" required aria-describedby="hero-err">
+            <button class="btn btn-solid" type="submit">Join the waitlist</button>
+          </div>
+          <p class="err" id="hero-err" role="alert"></p>
+          <p class="note">Free plan, no account. Waitlist gets year one of Pro for <strong class="founding">$29.99</strong>.</p>
+          <p class="note consent">By joining, you confirm you're 18 or older, agree to get launch emails (unsubscribe anytime) and agree to our <a href="/terms/">Terms</a> and <a href="/privacy/">Privacy Policy</a>.</p>
+        </form>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="plate-mark" style="--a:#F6DDCF;--b:#E9B396;width:190px;height:190px;top:4%;right:2%"></span>
+        <span class="plate-mark" style="--a:#E3ECDF;--b:#B9CFB2;width:150px;height:150px;bottom:8%;left:0"></span>
+        <span class="plate-mark" style="--a:#FAEBC5;--b:#F0D28A;width:96px;height:96px;bottom:2%;right:10%"></span>
+        <div class="device"><img src="img/today.jpg" alt="" width="1206" height="2622" fetchpriority="high"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec rule-top" id="why">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="label">Why it's different</span>
+        <h2>Built for what actually goes wrong on a GLP‑1.</h2>
+      </div>
+      <div class="pillars rv">
+        <div><span class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></svg></span><h3>Protein you can actually eat.</h3><p>Most meals get about a third of their calories from protein, which nutrition experts say to prioritize on a GLP‑1, with strength training, to help keep muscle.<sup><a href="#ref1" aria-label="Source 1">1</a></sup> Can't face food? Switch to a minimum day of small bites and sips.</p></div>
+        <div><span class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10.2A4.3 4.3 0 0 1 12 8a4.3 4.3 0 0 1 7 2.8C19 16.6 12 21 12 21z"/></svg></span><h3>Easy on your stomach.</h3><p>Dose days and the week after a dose increase plan themselves: small, mild meals. If something didn't sit well, tap it and it's gone for good.</p></div>
+        <div><span class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><h3>No calorie counting.</h3><p>Check off the plate you ate and protein, water and fiber fill in. Off-plan meal? Add it with one number. Hide the scale if you'd rather not see it.</p></div>
+        <div><span class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span><h3>Ready for what comes next.</h3><p>Lowering your dose or stopping? Your plan shifts to keeping it off, with a plan for when food noise comes back and a heads-up if the trend creeps up.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec shots-sec" aria-label="Screens from the app">
+    <div class="strip rv">
+      <figure><div class="device"><img src="img/today.jpg" alt="Today: protein, water and fiber rings with today's small-plate meals" width="1206" height="2622" loading="lazy"></div><figcaption>Today, sized to your appetite</figcaption></figure>
+      <figure><div class="device"><img src="img/gentle.jpg" alt="A gentle shot day with easy-on-nausea meals" width="1206" height="2622" loading="lazy"></div><figcaption>Shot day, made gentle</figcaption></figure>
+      <figure><div class="device"><img src="img/groceries.jpg" alt="The grocery list in store aisle order with an estimated total" width="1206" height="2622" loading="lazy"></div><figcaption>Groceries for your store</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec offer" id="join">
+    <div class="wrap">
+      <div class="rv" style="display:grid;gap:22px">
+        <span class="label" style="color:var(--on-deep-2)">Free to start</span>
+        <h2>Free plans today. Pro plans your whole week.</h2>
+        <p class="body">Today's meals, swaps, groceries and tracking are free, with no account and no card. Pro plans every day ahead and shops it at your store in one trip.</p>
+        <form class="signup" id="offer-form" novalidate>
+          <div class="field">
+            <label for="offer-email" hidden>Email address</label>
+            <input id="offer-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email" required aria-describedby="offer-err">
+            <button class="btn btn-solid" type="submit">Save my spot</button>
+          </div>
+          <p class="err" id="offer-err" role="alert"></p>
+          <p class="note consent">By joining, you confirm you're 18 or older, agree to get launch emails (unsubscribe anytime) and agree to our <a href="/terms/">Terms</a> and <a href="/privacy/">Privacy Policy</a>.</p>
+        </form>
+      </div>
+      <div class="ticket rv">
+        <span class="label">Founding price, waitlist only</span>
+        <div class="price"><b class="founding num">$29.99</b><s class="regular num">$49.99</s></div>
+        <p style="color:var(--on-deep-2)">for your first year of Pro (about <span class="founding-mo">$2.50</span> a month), then <span class="regular">$49.99</span> a year.</p>
+        <ul>
+          <li>Nothing charged now. We email your App Store code at launch</li>
+          <li>7 days free, with a reminder 2 days before billing (notifications on)</li>
+          <li>Cancel anytime in your iPhone's Settings</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="wrap faq-grid">
+      <div class="rv" style="display:grid;gap:16px">
+        <span class="label">Questions</span>
+        <h2>Quick answers</h2>
+      </div>
+      <div class="faq rv">
+        <details><summary>Which GLP‑1s is it for?</summary><p>Any of them: semaglutide or tirzepatide, brand-name or compounded, weekly shot or daily pill. It works if you're lowering your dose or stopping, too.</p></details>
+        <details><summary>Is this medical advice?</summary><p>No. Smallplate plans meals and never tells you how much medication to take. That stays with your prescriber.</p></details>
+        <details><summary>Will I get charged by surprise?</summary><p>Nothing is charged on this website: the founding price is claimed in the App Store at launch with a code we email you. The free plan needs no card. If you start Pro's free trial, the App Store shows the price and renewal date before you confirm, we remind you 2 days before billing (if notifications are on), and you can cancel anytime in your iPhone's Settings.</p></details>
+        <details><summary>Android?</summary><p>iPhone first. Android is planned. Join and we'll email you if it launches.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="mark" href="#top" style="font-size:19px"><svg width="22" height="22" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="var(--sage)"/><circle cx="14" cy="14" r="8.4" fill="none" stroke="var(--paper)" stroke-width="1.8"/><circle cx="14" cy="14" r="3" fill="var(--terra)"/></svg><span data-brand>Smallplate</span></a>
+      <nav class="links" aria-label="More"><a href="/recipes/">Recipes</a><a href="/support/">Support</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/health-data/">Consumer Health Data</a></nav>
+    </div>
+    <div class="foot-legal">
+      <p>Smallplate is a meal-planning app for general nutrition education. It isn't medical advice and doesn't diagnose, treat or give dosing guidance. Talk to your prescriber about your dose and side effects.</p>
+      <p>Smallplate isn't affiliated with or endorsed by any drug maker, grocery store or professional organization. Medication and store names are trademarks of their owners, used only to describe compatibility. iPhone and App Store are trademarks of Apple Inc.</p>
+      <p id="ref1">1. Nutritional Priorities to Support GLP‑1 Therapy for Obesity, a 2025 joint advisory from the American College of Lifestyle Medicine, the American Society for Nutrition, the Obesity Medicine Association and The Obesity Society.</p>
+      <p>© 2026 Smallplate</p>
+    </div>
+  </div>
+</footer>
+
+<div class="dock" id="dock" aria-hidden="true"><p><strong>GLP‑1 meal plans</strong><br>First year of Pro: <span class="founding">$29.99</span></p><a class="btn btn-solid" href="#join" data-open tabindex="-1">Join</a></div>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="panel-top">
+      <button class="x back" type="button" id="sheet-back" aria-label="Back" hidden><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2L4 7l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="steps" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+      <button class="x" type="button" id="sheet-close" aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    </div>
+    <div id="sheet-body" style="display:grid;gap:20px"></div>
+  </div>
+</div>
+
+<script>
+/* ---------- Config: fill these in before going live ---------- */
+const CONFIG = {
+  brand: 'Smallplate',
+  // Live backend: a Google Form with one "payload" question, linked to the "Smallplate waitlist" Sheet
+  // (Events, Leads and Funnel tabs parse it with formulas; see docs/DEMAND.md). No server, no script to deploy.
+  formAction: 'https://docs.google.com/forms/d/e/1FAIpQLSc6zYDcRtTgzkLJ_L8X23lL7CZsdsMizXuW4fb2oRe6kgnQjQ/formResponse',
+  formEntry: 'entry.1633762701',
+  waitlistEndpoint: '',   // Optional alternative: Google Apps Script web app URL (tools/waitlist.gs, ends in /exec).
+  posthogKey: '',         // PostHog project key. Empty = no analytics.
+  posthogHost: 'https://us.i.posthog.com',
+  checkoutUrl: '',        // Stripe Payment Link for a refundable founding deposit. Empty = fake door (records intent, charges nothing).
+  foundingPrice: '$29.99', // waitlist only: first year of Pro
+  regularPrice: '$49.99',  // Pro, yearly (7-day free trial)
+  monthlyPrice: '$9.99',   // Pro, monthly (no trial)
+};
+// Per-month figures are derived, and always shown smaller than the billed price (Apple 3.1.2; docs/PRICING.md).
+const perMonth = p => '$' + (parseFloat(String(p).replace(/[^0-9.]/g, '')) / 12).toFixed(2);
+
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+};
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+$$('[data-brand]').forEach(el => el.textContent = CONFIG.brand);
+$$('.founding').forEach(el => el.textContent = CONFIG.foundingPrice);
+$$('.regular').forEach(el => el.textContent = CONFIG.regularPrice);
+$$('.regular-yr').forEach(el => el.textContent = CONFIG.regularPrice + '/yr');
+$$('.regular-mo').forEach(el => el.textContent = perMonth(CONFIG.regularPrice) + ' a month · 7 days free');
+$$('.founding-mo').forEach(el => el.textContent = perMonth(CONFIG.foundingPrice));
+$$('.monthly').forEach(el => el.textContent = CONFIG.monthlyPrice);
+
+/* ---------- Tracking: one event per waitlist rung ---------- */
+const params = new URLSearchParams(location.search);
+// First touch wins: someone who found us on TikTok and comes back later by typing the URL still counts as TikTok.
+// Use ?utm_source=tiktok&utm_content=<video-id> on every link you post, so each video gets its own row.
+const refHost = (() => { try { const h = new URL(document.referrer).hostname.replace(/^www\./, ''); return h && h !== location.hostname ? h : ''; } catch { return ''; } })();
+const touch = { source: (params.get('utm_source') || (params.get('ref') ? 'referral' : refHost)).toLowerCase().slice(0, 40), medium: params.get('utm_medium') || '', campaign: params.get('utm_campaign') || '', content: params.get('utm_content') || '', ref: params.get('ref') || '' };
+let first = store.get('sp_src');
+if (!first || !first.source) { first = touch.source ? touch : { ...touch, source: 'direct' }; store.set('sp_src', first); }
+// Phone OS tells us how much an Android version is worth (docs/ANDROID.md) without asking another question.
+const os = /android/i.test(navigator.userAgent) ? 'android' : /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) ? 'ios' : 'other';
+const source = { ...first, device: os + '-' + (matchMedia('(pointer: coarse)').matches ? 'mobile' : 'desktop') };
+let lead = store.get('sp_lead');
+if (!lead || typeof lead !== 'object' || !lead.id) lead = { id: Math.random().toString(36).slice(2, 10), answers: {} };
+lead.answers = lead.answers || {};
+if (CONFIG.posthogKey) {
+  const s = document.createElement('script');
+  s.src = CONFIG.posthogHost.replace('.i.posthog', '-assets.i.posthog') + '/static/array.js';
+  s.onload = () => { window.posthog?.init(CONFIG.posthogKey, { api_host: CONFIG.posthogHost, persistence: 'localStorage' }); window.posthog?.capture('waitlist_page_view', source); };
+  document.head.appendChild(s);
+}
+function track(event, props = {}) {
+  const payload = { event, lead_id: lead.id, email: lead.email || '', ...source, ...props, ts: new Date().toISOString() };
+  try { window.posthog?.capture(event, payload); } catch {}
+  // text/plain + no-cors: a "simple" request with no CORS preflight, which Apps Script can't answer.
+  // Off the live site (the claude.ai preview, localhost) nothing is sent, so reviews never pollute the numbers.
+  const live = /^https:/.test(location.protocol) && !/claude|localhost|127\.0\.0\.1/.test(location.hostname);
+  if (CONFIG.formAction && live) { const fd = new URLSearchParams(); fd.set(CONFIG.formEntry, JSON.stringify(payload)); fetch(CONFIG.formAction, { method: 'POST', mode: 'no-cors', body: fd, keepalive: true }).catch(() => {}); }
+  if (CONFIG.waitlistEndpoint && live) fetch(CONFIG.waitlistEndpoint, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=UTF-8' }, body: JSON.stringify(payload), keepalive: true }).catch(() => {});
+  const log = store.get('sp_events') || []; log.push(payload); store.set('sp_events', log.slice(-80));
+}
+track('waitlist_page_view');
+// Diagnostic rungs: did they reach the price? (Tells "didn't scroll" apart from "saw it and left".)
+if ('IntersectionObserver' in window) {
+  const seen = new Set();
+  const io2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !seen.has(e.target.id)) { seen.add(e.target.id); track(e.target.id === 'join' ? 'pricing_view' : 'feature_view', { section: e.target.id }); } }), { threshold: 0, rootMargin: '-40% 0px -40% 0px' });
+  ['join', 'why'].forEach(id => { const el = document.getElementById(id); if (el) io2.observe(el); });
+}
+
+/* ---------- Nav border on scroll, mobile dock ---------- */
+const nav = $('#nav'), dock = $('#dock');
+function onScroll() {
+  nav.classList.toggle('scrolled', scrollY > 8);
+  const joinTop = $('#join').getBoundingClientRect().top;
+  const show = scrollY > innerHeight * .9 && joinTop > innerHeight * .9;
+  dock.classList.toggle('show', show);
+  dock.setAttribute('aria-hidden', String(!show));
+  $('a', dock).tabIndex = show ? 0 : -1;
+}
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+/* ---------- Reveal on scroll (content stays visible without JS) ---------- */
+if (!reduce && 'IntersectionObserver' in window) {
+  // Reveal when it enters view, or if the visitor has already scrolled past it (fast scroll, anchor jump).
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting || e.boundingClientRect.top < 0) { e.target.classList.remove('pre'); io.unobserve(e.target); } }), { threshold: [0, .1], rootMargin: '0px 0px -40px 0px' });
+  $$('.rv').forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('pre'); io.observe(el); } });
+}
+
+/* ---------- Waitlist ladder ---------- */
+const sheet = $('#sheet'), body = $('#sheet-body');
+const QUIZ = [
+  { key: 'store', q: 'Where do you usually shop?', sub: "So your grocery list follows your store's aisles.", opts: ["Trader Joe's", 'Costco', 'Aldi', 'Walmart', 'Kroger', 'Somewhere else'] },
+  { key: 'medication', q: 'Where are you with your GLP‑1?', sub: 'So your first week fits where you are.', health: true, opts: ['Starting soon', 'First 3 months', '3 to 12 months', 'Over a year', 'On a daily pill', 'Lowering or stopping'] },
+  { key: 'hardest', q: "What's hardest right now?", sub: "We'll put the fix for it first.", health: true, opts: ['Getting enough protein', 'Nausea or stomach trouble', 'Knowing what to eat', 'Food noise', 'Constipation', 'Keeping the weight off'] },
+];
+// Steps: 0 email · 1-3 one question each · 4 founding price · 5 share. Back goes one step; answers stay editable.
+const PRICE = 1 + QUIZ.length, DONE = PRICE + 1;
+let step = 0, lastFocus = null, quizSent = false;
+const setSteps = n => $$('.steps i').forEach((el, i) => el.classList.toggle('on', i <= n));
+function openSheet(at) {
+  if (at === 0) track('join_open');
+  lastFocus = document.activeElement; step = at; sheet.hidden = false; document.documentElement.style.overflow = 'hidden'; render();
+}
+function closeSheet() {
+  sheet.hidden = true; document.documentElement.style.overflow = '';
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+function go(n) { step = n; render(); }
+$('#sheet-close').addEventListener('click', closeSheet);
+$('#sheet-back').addEventListener('click', () => { if (step > 0 && step < DONE) go(step - 1); });
+sheet.addEventListener('click', e => { if (e.target === sheet) closeSheet(); });
+addEventListener('keydown', e => {
+  if (sheet.hidden) return;
+  if (e.key === 'Escape') { closeSheet(); return; }
+  if (e.key === 'Tab') { // keep focus inside the dialog
+    const f = $$('button, input, [href]', $('.panel')).filter(x => !x.disabled && x.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+});
+function focusFirst(sel) { setTimeout(() => { const el = $(sel, body) || $('button', body); el?.focus(); }, 40); }
+// Answers are sent when the visitor leaves the last question, so health answers only leave the browser after they
+// chose one under the consent note. Going back and changing an answer re-sends the latest set.
+function sendQuiz() {
+  const answered = QUIZ.filter(q => lead.answers[q.key]).length;
+  if (answered) track('quiz_complete', { ...lead.answers, answered: String(answered) }); else track('quiz_skip');
+  quizSent = true;
+}
+
+function render() {
+  setSteps(step);
+  $('#sheet-back').hidden = step === 0 || step === DONE;
+  if (step === 0) {
+    body.innerHTML = `<div><h3 id="sheet-title">Join the waitlist</h3><p class="sub">We'll email you the day ${esc(CONFIG.brand)} launches.</p></div>
+      <form class="signup" id="sheet-form" novalidate style="max-width:none"><div class="field"><label for="sheet-email" hidden>Email address</label><input id="sheet-email" type="email" inputmode="email" autocomplete="email" placeholder="Your email" required aria-describedby="sheet-err" value="${esc(lead.email || '')}"><button class="btn btn-solid" type="submit">Save my spot</button></div><p class="err" id="sheet-err" role="alert"></p><p class="note consent">By joining, you confirm you're 18 or older, agree to get launch emails (unsubscribe anytime) and agree to our <a href="/terms/">Terms</a> and <a href="/privacy/">Privacy Policy</a>.</p></form>`;
+    bindJoin($('#sheet-form'), $('#sheet-email'), $('#sheet-err'));
+    focusFirst('#sheet-email');
+  } else if (step <= QUIZ.length) {
+    const i = step - 1, q = QUIZ[i], last = i === QUIZ.length - 1;
+    const head = i === 0 ? `You're on the list · Question 1 of ${QUIZ.length}` : `Question ${i + 1} of ${QUIZ.length}`;
+    body.innerHTML = `<div><p class="qcount">${head}</p><h3 id="sheet-title">${esc(q.q)}</h3><p class="sub">${esc(q.sub)}</p></div>
+      <div class="opts" role="group" aria-labelledby="sheet-title">${q.opts.map(o => `<button type="button" aria-pressed="${lead.answers[q.key] === o}">${esc(o)}</button>`).join('')}</div>` +
+      (q.health ? `<p class="note consent">Optional. This is health information: choosing an answer means you agree we can store it with your email (in Google Sheets) to tailor your launch email and first week. <a href="/health-data/">Consumer Health Data Policy</a></p>` : '') +
+      `<button class="linkish" type="button" id="q-skip">${lead.answers[q.key] ? 'Clear my answer and continue' : 'Skip this question'}</button>`;
+    const next = () => { if (last) sendQuiz(); go(step + 1); };
+    $$('.opts button', body).forEach(b => b.addEventListener('click', () => {
+      lead.answers[q.key] = b.textContent; store.set('sp_lead', lead);
+      $$('.opts button', body).forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      setTimeout(next, 220);
+    }));
+    $('#q-skip').addEventListener('click', () => { delete lead.answers[q.key]; store.set('sp_lead', lead); next(); });
+    focusFirst('.opts button[aria-pressed="true"]');
+  } else if (step === PRICE) {
+    if (!quizSent) sendQuiz();
+    track('price_view');
+    // A fake door on purpose: it measures who would pay, without taking money before the app exists (docs/DEMAND.md).
+    body.innerHTML = `<div><h3 id="sheet-title">Want the founding price?</h3><p class="sub">For people on the waitlist only.</p></div>
+      <div class="ticket"><div class="price"><b class="num">${esc(CONFIG.foundingPrice)}</b><s class="num">${esc(CONFIG.regularPrice)}</s></div><p style="font-size:14.5px">Your first year of Pro (about ${esc(perMonth(CONFIG.foundingPrice))} a month), then ${esc(CONFIG.regularPrice)} a year. Starts with a 7-day free trial.</p></div>
+      <ul class="perks">${CONFIG.checkoutUrl ? '<li>A refundable $1 deposit holds your price</li>' : '<li>No card and no charge today</li>'}<li>At launch we email you an App Store code. Claim it within 30 days.</li><li>Cancel anytime. The free plan is yours either way.</li></ul>
+      <button class="btn btn-solid" type="button" id="pay">Yes, reserve ${esc(CONFIG.foundingPrice)} for year one</button>
+      <button class="linkish" type="button" id="pay-skip">No thanks, just keep me on the list</button>`;
+    $('#pay').addEventListener('click', () => {
+      track('pay_attempt', { price: CONFIG.foundingPrice, mode: CONFIG.checkoutUrl ? 'deposit' : 'fake_door' });
+      lead.paid_intent = true; store.set('sp_lead', lead);
+      if (CONFIG.checkoutUrl) { const a = document.createElement('a'); a.href = CONFIG.checkoutUrl + (CONFIG.checkoutUrl.includes('?') ? '&' : '?') + 'client_reference_id=' + encodeURIComponent(lead.id); a.target = '_blank'; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove(); }
+      go(DONE);
+    });
+    $('#pay-skip').addEventListener('click', () => { track('pay_skip'); lead.paid_intent = false; store.set('sp_lead', lead); go(DONE); });
+    focusFirst('#pay');
+  } else {
+    const link = `${location.origin}${location.pathname}?ref=${encodeURIComponent(lead.id)}`;
+    const reserved = lead.paid_intent;
+    body.innerHTML = `<div><h3 id="sheet-title">${reserved ? `${esc(CONFIG.foundingPrice)} is reserved for you.` : "You're all set."}</h3><p class="sub">${reserved ? 'Nothing was charged. Look for your code in your inbox on launch day. ' : "We'll email you on launch day. "}Know someone else on a GLP‑1? Send them your link so they get the founding price too.</p></div>
+      <div class="copyrow"><label for="ref" hidden>Your invite link</label><input id="ref" readonly value="${esc(link)}"><button class="btn btn-solid" type="button" id="copy">Copy link</button></div>
+      <button class="btn btn-quiet" type="button" id="done">Done</button>`;
+    $('#copy').addEventListener('click', () => {
+      track('referral_copy');
+      const ok = () => { $('#copy').textContent = 'Copied'; };
+      try { navigator.clipboard.writeText(link).then(ok, () => { $('#ref').select(); $('#copy').textContent = 'Press ⌘C'; }); }
+      catch { $('#ref').select(); $('#copy').textContent = 'Press ⌘C'; }
+    });
+    $('#ref').addEventListener('focus', e => e.target.select());
+    $('#done').addEventListener('click', closeSheet);
+    focusFirst('#copy');
+  }
+}
+const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+function bindJoin(form, input, err) {
+  input.addEventListener('input', () => { if (input.getAttribute('aria-invalid') === 'true') { input.removeAttribute('aria-invalid'); err.textContent = ''; } });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const v = input.value.trim();
+    if (!validEmail(v)) { err.textContent = 'Check your email address. It should look like name@example.com.'; input.setAttribute('aria-invalid', 'true'); input.focus(); return; }
+    input.removeAttribute('aria-invalid'); err.textContent = '';
+    const already = lead.email === v;
+    lead.email = v; store.set('sp_lead', lead);
+    if (!already) track('waitlist_join', { form: form.id });
+    if (!sheet.hidden) go(1); else openSheet(1);
+  });
+}
+bindJoin($('#hero-form'), $('#hero-email'), $('#hero-err'));
+bindJoin($('#offer-form'), $('#offer-email'), $('#offer-err'));
+$$('[data-open]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); openSheet(!lead.email ? 0 : typeof lead.paid_intent === 'boolean' ? DONE : 1); }));
+</script>
+</body>
+</html>
